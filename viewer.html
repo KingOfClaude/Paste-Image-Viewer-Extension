@@ -1,0 +1,23 @@
+<!doctype html><meta charset="utf-8"><title>Paste Image Viewer</title><link rel="stylesheet" href="style.css">
+<div id="app">
+<aside id="side"><header><h1 class="brand"><img src="icons/icon32.png" alt="">Paste Image Viewer</h1>
+<input id="q" type="search" placeholder="Search names ( / )"></header>
+<div id="list"></div>
+<div class="bar" style="padding:10px"><button id="open">Open file</button><button id="clr" class="danger">Clear all</button>
+<input type="file" id="file" accept="image/*" hidden></div></aside>
+<main id="detail">
+  <p id="empty" class="empty">Paste an image (Ctrl+V or Cmd+V) or drop a file here. Select an image on the left to view it again.</p>
+  <div id="view" hidden>
+    <div class="bar"><input id="nm" aria-label="Image name"><button id="copy">Copy</button><button class="pri" id="dl">Download</button><button class="danger" id="del">Delete</button></div>
+    <p class="env mut" id="meta"></p>
+    <div class="bar">
+      <button id="zo" title="Zoom out" aria-label="Zoom out">−</button><span id="zoom">100%</span><button id="zi" title="Zoom in" aria-label="Zoom in">+</button>
+      <button id="fit">Fit</button><button id="act">100%</button>
+      <button id="rl">Rotate left</button><button id="rr">Rotate right</button><button id="fl">Flip</button>
+      <button id="bg">Background: default</button>
+    </div>
+    <div id="stage"><img id="img" alt="" draggable="false"></div>
+  </div>
+</main></div>
+<div id="toast" role="status"></div>
+<script src="db.js"></script><script src="viewer.js"></script>
